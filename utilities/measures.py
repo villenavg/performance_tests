@@ -4,7 +4,6 @@ import numpy
 class Helpers(object):
 
     def __init__(self, parent):
-        print "Init Helpers"
         self.parent = parent
         self.measures = {}
 
