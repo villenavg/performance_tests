@@ -54,8 +54,8 @@
     "password": ""
   },
   "performance": {
-    "runs": 5,
-    "contacts_num": 20,
+    "runs": 3,
+    "contacts_num": 45,
     "verbose": true
   }
 }
