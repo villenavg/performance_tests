@@ -39,9 +39,13 @@ class TestPerformance(GaiaTestCase):
             contacts_app = Contacts(self.marionette)
             contacts_app.launch()
             contacts_app.wait_for_contacts(number_to_wait_for=self.contacts_num)
+
+            # Tap on the first contact, to see its details
+            contact_details = contacts_app.contact(self.contacts[0]['givenName']).tap()
             map(self.helpers.store_measures,
                 ['list_first_contact_rendered', 'list_chunk_contact_rendered',
-                 'list_all_contacts_rendered'])
+                 'list_all_contacts_rendered', 'details_contact_rendered'])
+
             if i + 1 < self.RUNS:
                 GaiaTestCase.setUp(self)
                 self._insert_contacts()
